@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:untitled_230421/screen/main_screen.dart';
-
+/// https://github.com/leechanghyunv/freezed-value--To--Ui.git
 void main() {
   runApp(const MyApp());
 }

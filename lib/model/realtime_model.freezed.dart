@@ -306,60 +306,77 @@ class __$$_RealtimeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Realtime implements _Realtime {
   const _$_Realtime(
-      {this.subwayId,
-      this.subwayNm,
-      this.updnLine,
-      this.trainLineNm,
-      this.subwayHeading,
-      this.statnFid,
-      this.statnTid,
-      this.statnId,
-      this.statnNm,
-      this.subwayList,
-      this.btrainSttus,
-      this.btrainNo,
-      this.bstatnId,
-      this.bstatnNm,
-      this.arvlMsg2,
-      this.arvlMsg3,
-      this.arvlCd});
+      {this.subwayId = "정보없음",
+      this.subwayNm = "정보없음",
+      this.updnLine = "정보없음",
+      this.trainLineNm = "정보없음",
+      this.subwayHeading = "정보없음",
+      this.statnFid = "정보없음",
+      this.statnTid = "정보없음",
+      this.statnId = "정보없음",
+      this.statnNm = "정보없음",
+      this.subwayList = "정보없음",
+      this.btrainSttus = "정보없음",
+      this.btrainNo = "정보없음",
+      this.bstatnId = "정보없음",
+      this.bstatnNm = "정보없음",
+      this.arvlMsg2 = "정보없음",
+      this.arvlMsg3 = "정보없음",
+      this.arvlCd = "정보없음"});
 
   factory _$_Realtime.fromJson(Map<String, dynamic> json) =>
       _$$_RealtimeFromJson(json);
 
   @override
+  @JsonKey()
   final String? subwayId;
   @override
+  @JsonKey()
   final dynamic subwayNm;
   @override
+  @JsonKey()
   final String? updnLine;
   @override
+  @JsonKey()
   final String? trainLineNm;
   @override
+  @JsonKey()
   final String? subwayHeading;
   @override
+  @JsonKey()
   final String? statnFid;
   @override
+  @JsonKey()
   final String? statnTid;
   @override
+  @JsonKey()
   final String? statnId;
   @override
+  @JsonKey()
   final String? statnNm;
   @override
+  @JsonKey()
   final String? subwayList;
   @override
+  @JsonKey()
   final String? btrainSttus;
   @override
+  @JsonKey()
   final String? btrainNo;
   @override
+  @JsonKey()
   final String? bstatnId;
   @override
+  @JsonKey()
   final String? bstatnNm;
   @override
+  @JsonKey()
   final String? arvlMsg2;
   @override
+  @JsonKey()
   final String? arvlMsg3;
   @override
+  @JsonKey()
   final String? arvlCd;
 
   @override

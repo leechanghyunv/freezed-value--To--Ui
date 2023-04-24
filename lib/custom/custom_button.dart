@@ -1,20 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class main_button extends StatefulWidget {
+class MainButton extends StatefulWidget {
 
   final String comment;
   final void Function()? onPressed;
 
-   const main_button
+   const MainButton
        ({Key? key, required this.comment,
      this.onPressed}) : super(key: key);
 
   @override
-  State<main_button> createState() => _main_buttonState();
+  State<MainButton> createState() => _MainButtonState();
 }
 
-class _main_buttonState extends State<main_button> {
+class _MainButtonState extends State<MainButton> {
   @override
   Widget build(BuildContext context) {
     return Row(

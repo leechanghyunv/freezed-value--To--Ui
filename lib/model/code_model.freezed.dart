@@ -20,8 +20,11 @@ CodeModel _$CodeModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CodeModel {
+  @JsonKey(name: 'STATION_NM')
   String? get subwaycode => throw _privateConstructorUsedError;
+  @JsonKey(name: 'LINE_NUM')
   String? get line => throw _privateConstructorUsedError;
+  @JsonKey(name: 'FR_CODE')
   String? get code => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +38,10 @@ abstract class $CodeModelCopyWith<$Res> {
   factory $CodeModelCopyWith(CodeModel value, $Res Function(CodeModel) then) =
       _$CodeModelCopyWithImpl<$Res, CodeModel>;
   @useResult
-  $Res call({String? subwaycode, String? line, String? code});
+  $Res call(
+      {@JsonKey(name: 'STATION_NM') String? subwaycode,
+      @JsonKey(name: 'LINE_NUM') String? line,
+      @JsonKey(name: 'FR_CODE') String? code});
 }
 
 /// @nodoc
@@ -79,7 +85,10 @@ abstract class _$$_CodeModelCopyWith<$Res> implements $CodeModelCopyWith<$Res> {
       __$$_CodeModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? subwaycode, String? line, String? code});
+  $Res call(
+      {@JsonKey(name: 'STATION_NM') String? subwaycode,
+      @JsonKey(name: 'LINE_NUM') String? line,
+      @JsonKey(name: 'FR_CODE') String? code});
 }
 
 /// @nodoc
@@ -117,16 +126,22 @@ class __$$_CodeModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CodeModel implements _CodeModel {
-  const _$_CodeModel({this.subwaycode, this.line, this.code});
+  const _$_CodeModel(
+      {@JsonKey(name: 'STATION_NM') this.subwaycode = "정보없음",
+      @JsonKey(name: 'LINE_NUM') this.line = "정보없음",
+      @JsonKey(name: 'FR_CODE') this.code = "정보없음"});
 
   factory _$_CodeModel.fromJson(Map<String, dynamic> json) =>
       _$$_CodeModelFromJson(json);
 
   @override
+  @JsonKey(name: 'STATION_NM')
   final String? subwaycode;
   @override
+  @JsonKey(name: 'LINE_NUM')
   final String? line;
   @override
+  @JsonKey(name: 'FR_CODE')
   final String? code;
 
   @override
@@ -165,18 +180,21 @@ class _$_CodeModel implements _CodeModel {
 
 abstract class _CodeModel implements CodeModel {
   const factory _CodeModel(
-      {final String? subwaycode,
-      final String? line,
-      final String? code}) = _$_CodeModel;
+      {@JsonKey(name: 'STATION_NM') final String? subwaycode,
+      @JsonKey(name: 'LINE_NUM') final String? line,
+      @JsonKey(name: 'FR_CODE') final String? code}) = _$_CodeModel;
 
   factory _CodeModel.fromJson(Map<String, dynamic> json) =
       _$_CodeModel.fromJson;
 
   @override
+  @JsonKey(name: 'STATION_NM')
   String? get subwaycode;
   @override
+  @JsonKey(name: 'LINE_NUM')
   String? get line;
   @override
+  @JsonKey(name: 'FR_CODE')
   String? get code;
   @override
   @JsonKey(ignore: true)

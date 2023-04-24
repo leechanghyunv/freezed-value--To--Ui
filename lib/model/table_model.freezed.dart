@@ -20,19 +20,26 @@ TimeTable _$TimeTableFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TimeTable {
-  String? get STATION_CD => throw _privateConstructorUsedError;
-  String? get STATION_NM => throw _privateConstructorUsedError;
-  String? get ARRIVETIME => throw _privateConstructorUsedError;
+  @JsonKey(name: 'STATION_CD')
+  String? get stationcd => throw _privateConstructorUsedError;
+  @JsonKey(name: 'STATION_NM')
+  String? get stationnm => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ARRIVETIME')
+  String? get arrivetime => throw _privateConstructorUsedError;
 
   ///
-  String? get ORIGINSTATION => throw _privateConstructorUsedError;
-  String? get SUBWAYSNAME => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ORIGINSTATION')
+  String? get originstation => throw _privateConstructorUsedError;
+  @JsonKey(name: 'SUBWAYSNAME')
+  String? get subwaysname => throw _privateConstructorUsedError;
 
   ///
-  String? get SUBWAYENAME => throw _privateConstructorUsedError;
+  @JsonKey(name: 'SUBWAYENAME')
+  String? get subwayename => throw _privateConstructorUsedError;
 
   ///
-  String? get EXPRESS_YN => throw _privateConstructorUsedError;
+  @JsonKey(name: 'EXPRESS_YN')
+  String? get express => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,13 +53,13 @@ abstract class $TimeTableCopyWith<$Res> {
       _$TimeTableCopyWithImpl<$Res, TimeTable>;
   @useResult
   $Res call(
-      {String? STATION_CD,
-      String? STATION_NM,
-      String? ARRIVETIME,
-      String? ORIGINSTATION,
-      String? SUBWAYSNAME,
-      String? SUBWAYENAME,
-      String? EXPRESS_YN});
+      {@JsonKey(name: 'STATION_CD') String? stationcd,
+      @JsonKey(name: 'STATION_NM') String? stationnm,
+      @JsonKey(name: 'ARRIVETIME') String? arrivetime,
+      @JsonKey(name: 'ORIGINSTATION') String? originstation,
+      @JsonKey(name: 'SUBWAYSNAME') String? subwaysname,
+      @JsonKey(name: 'SUBWAYENAME') String? subwayename,
+      @JsonKey(name: 'EXPRESS_YN') String? express});
 }
 
 /// @nodoc
@@ -68,42 +75,42 @@ class _$TimeTableCopyWithImpl<$Res, $Val extends TimeTable>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? STATION_CD = freezed,
-    Object? STATION_NM = freezed,
-    Object? ARRIVETIME = freezed,
-    Object? ORIGINSTATION = freezed,
-    Object? SUBWAYSNAME = freezed,
-    Object? SUBWAYENAME = freezed,
-    Object? EXPRESS_YN = freezed,
+    Object? stationcd = freezed,
+    Object? stationnm = freezed,
+    Object? arrivetime = freezed,
+    Object? originstation = freezed,
+    Object? subwaysname = freezed,
+    Object? subwayename = freezed,
+    Object? express = freezed,
   }) {
     return _then(_value.copyWith(
-      STATION_CD: freezed == STATION_CD
-          ? _value.STATION_CD
-          : STATION_CD // ignore: cast_nullable_to_non_nullable
+      stationcd: freezed == stationcd
+          ? _value.stationcd
+          : stationcd // ignore: cast_nullable_to_non_nullable
               as String?,
-      STATION_NM: freezed == STATION_NM
-          ? _value.STATION_NM
-          : STATION_NM // ignore: cast_nullable_to_non_nullable
+      stationnm: freezed == stationnm
+          ? _value.stationnm
+          : stationnm // ignore: cast_nullable_to_non_nullable
               as String?,
-      ARRIVETIME: freezed == ARRIVETIME
-          ? _value.ARRIVETIME
-          : ARRIVETIME // ignore: cast_nullable_to_non_nullable
+      arrivetime: freezed == arrivetime
+          ? _value.arrivetime
+          : arrivetime // ignore: cast_nullable_to_non_nullable
               as String?,
-      ORIGINSTATION: freezed == ORIGINSTATION
-          ? _value.ORIGINSTATION
-          : ORIGINSTATION // ignore: cast_nullable_to_non_nullable
+      originstation: freezed == originstation
+          ? _value.originstation
+          : originstation // ignore: cast_nullable_to_non_nullable
               as String?,
-      SUBWAYSNAME: freezed == SUBWAYSNAME
-          ? _value.SUBWAYSNAME
-          : SUBWAYSNAME // ignore: cast_nullable_to_non_nullable
+      subwaysname: freezed == subwaysname
+          ? _value.subwaysname
+          : subwaysname // ignore: cast_nullable_to_non_nullable
               as String?,
-      SUBWAYENAME: freezed == SUBWAYENAME
-          ? _value.SUBWAYENAME
-          : SUBWAYENAME // ignore: cast_nullable_to_non_nullable
+      subwayename: freezed == subwayename
+          ? _value.subwayename
+          : subwayename // ignore: cast_nullable_to_non_nullable
               as String?,
-      EXPRESS_YN: freezed == EXPRESS_YN
-          ? _value.EXPRESS_YN
-          : EXPRESS_YN // ignore: cast_nullable_to_non_nullable
+      express: freezed == express
+          ? _value.express
+          : express // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -117,13 +124,13 @@ abstract class _$$_TimeTableCopyWith<$Res> implements $TimeTableCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String? STATION_CD,
-      String? STATION_NM,
-      String? ARRIVETIME,
-      String? ORIGINSTATION,
-      String? SUBWAYSNAME,
-      String? SUBWAYENAME,
-      String? EXPRESS_YN});
+      {@JsonKey(name: 'STATION_CD') String? stationcd,
+      @JsonKey(name: 'STATION_NM') String? stationnm,
+      @JsonKey(name: 'ARRIVETIME') String? arrivetime,
+      @JsonKey(name: 'ORIGINSTATION') String? originstation,
+      @JsonKey(name: 'SUBWAYSNAME') String? subwaysname,
+      @JsonKey(name: 'SUBWAYENAME') String? subwayename,
+      @JsonKey(name: 'EXPRESS_YN') String? express});
 }
 
 /// @nodoc
@@ -137,42 +144,42 @@ class __$$_TimeTableCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? STATION_CD = freezed,
-    Object? STATION_NM = freezed,
-    Object? ARRIVETIME = freezed,
-    Object? ORIGINSTATION = freezed,
-    Object? SUBWAYSNAME = freezed,
-    Object? SUBWAYENAME = freezed,
-    Object? EXPRESS_YN = freezed,
+    Object? stationcd = freezed,
+    Object? stationnm = freezed,
+    Object? arrivetime = freezed,
+    Object? originstation = freezed,
+    Object? subwaysname = freezed,
+    Object? subwayename = freezed,
+    Object? express = freezed,
   }) {
     return _then(_$_TimeTable(
-      STATION_CD: freezed == STATION_CD
-          ? _value.STATION_CD
-          : STATION_CD // ignore: cast_nullable_to_non_nullable
+      stationcd: freezed == stationcd
+          ? _value.stationcd
+          : stationcd // ignore: cast_nullable_to_non_nullable
               as String?,
-      STATION_NM: freezed == STATION_NM
-          ? _value.STATION_NM
-          : STATION_NM // ignore: cast_nullable_to_non_nullable
+      stationnm: freezed == stationnm
+          ? _value.stationnm
+          : stationnm // ignore: cast_nullable_to_non_nullable
               as String?,
-      ARRIVETIME: freezed == ARRIVETIME
-          ? _value.ARRIVETIME
-          : ARRIVETIME // ignore: cast_nullable_to_non_nullable
+      arrivetime: freezed == arrivetime
+          ? _value.arrivetime
+          : arrivetime // ignore: cast_nullable_to_non_nullable
               as String?,
-      ORIGINSTATION: freezed == ORIGINSTATION
-          ? _value.ORIGINSTATION
-          : ORIGINSTATION // ignore: cast_nullable_to_non_nullable
+      originstation: freezed == originstation
+          ? _value.originstation
+          : originstation // ignore: cast_nullable_to_non_nullable
               as String?,
-      SUBWAYSNAME: freezed == SUBWAYSNAME
-          ? _value.SUBWAYSNAME
-          : SUBWAYSNAME // ignore: cast_nullable_to_non_nullable
+      subwaysname: freezed == subwaysname
+          ? _value.subwaysname
+          : subwaysname // ignore: cast_nullable_to_non_nullable
               as String?,
-      SUBWAYENAME: freezed == SUBWAYENAME
-          ? _value.SUBWAYENAME
-          : SUBWAYENAME // ignore: cast_nullable_to_non_nullable
+      subwayename: freezed == subwayename
+          ? _value.subwayename
+          : subwayename // ignore: cast_nullable_to_non_nullable
               as String?,
-      EXPRESS_YN: freezed == EXPRESS_YN
-          ? _value.EXPRESS_YN
-          : EXPRESS_YN // ignore: cast_nullable_to_non_nullable
+      express: freezed == express
+          ? _value.express
+          : express // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -182,41 +189,48 @@ class __$$_TimeTableCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TimeTable implements _TimeTable {
   const _$_TimeTable(
-      {this.STATION_CD,
-      this.STATION_NM,
-      this.ARRIVETIME,
-      this.ORIGINSTATION,
-      this.SUBWAYSNAME,
-      this.SUBWAYENAME,
-      this.EXPRESS_YN});
+      {@JsonKey(name: 'STATION_CD') this.stationcd = "정보없음",
+      @JsonKey(name: 'STATION_NM') this.stationnm = "정보없음",
+      @JsonKey(name: 'ARRIVETIME') this.arrivetime = "정보없음",
+      @JsonKey(name: 'ORIGINSTATION') this.originstation = "정보없음",
+      @JsonKey(name: 'SUBWAYSNAME') this.subwaysname = "정보없음",
+      @JsonKey(name: 'SUBWAYENAME') this.subwayename = "정보없음",
+      @JsonKey(name: 'EXPRESS_YN') this.express = "정보없음"});
 
   factory _$_TimeTable.fromJson(Map<String, dynamic> json) =>
       _$$_TimeTableFromJson(json);
 
   @override
-  final String? STATION_CD;
+  @JsonKey(name: 'STATION_CD')
+  final String? stationcd;
   @override
-  final String? STATION_NM;
+  @JsonKey(name: 'STATION_NM')
+  final String? stationnm;
   @override
-  final String? ARRIVETIME;
+  @JsonKey(name: 'ARRIVETIME')
+  final String? arrivetime;
 
   ///
   @override
-  final String? ORIGINSTATION;
+  @JsonKey(name: 'ORIGINSTATION')
+  final String? originstation;
   @override
-  final String? SUBWAYSNAME;
+  @JsonKey(name: 'SUBWAYSNAME')
+  final String? subwaysname;
 
   ///
   @override
-  final String? SUBWAYENAME;
+  @JsonKey(name: 'SUBWAYENAME')
+  final String? subwayename;
 
   ///
   @override
-  final String? EXPRESS_YN;
+  @JsonKey(name: 'EXPRESS_YN')
+  final String? express;
 
   @override
   String toString() {
-    return 'TimeTable(STATION_CD: $STATION_CD, STATION_NM: $STATION_NM, ARRIVETIME: $ARRIVETIME, ORIGINSTATION: $ORIGINSTATION, SUBWAYSNAME: $SUBWAYSNAME, SUBWAYENAME: $SUBWAYENAME, EXPRESS_YN: $EXPRESS_YN)';
+    return 'TimeTable(stationcd: $stationcd, stationnm: $stationnm, arrivetime: $arrivetime, originstation: $originstation, subwaysname: $subwaysname, subwayename: $subwayename, express: $express)';
   }
 
   @override
@@ -224,26 +238,25 @@ class _$_TimeTable implements _TimeTable {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_TimeTable &&
-            (identical(other.STATION_CD, STATION_CD) ||
-                other.STATION_CD == STATION_CD) &&
-            (identical(other.STATION_NM, STATION_NM) ||
-                other.STATION_NM == STATION_NM) &&
-            (identical(other.ARRIVETIME, ARRIVETIME) ||
-                other.ARRIVETIME == ARRIVETIME) &&
-            (identical(other.ORIGINSTATION, ORIGINSTATION) ||
-                other.ORIGINSTATION == ORIGINSTATION) &&
-            (identical(other.SUBWAYSNAME, SUBWAYSNAME) ||
-                other.SUBWAYSNAME == SUBWAYSNAME) &&
-            (identical(other.SUBWAYENAME, SUBWAYENAME) ||
-                other.SUBWAYENAME == SUBWAYENAME) &&
-            (identical(other.EXPRESS_YN, EXPRESS_YN) ||
-                other.EXPRESS_YN == EXPRESS_YN));
+            (identical(other.stationcd, stationcd) ||
+                other.stationcd == stationcd) &&
+            (identical(other.stationnm, stationnm) ||
+                other.stationnm == stationnm) &&
+            (identical(other.arrivetime, arrivetime) ||
+                other.arrivetime == arrivetime) &&
+            (identical(other.originstation, originstation) ||
+                other.originstation == originstation) &&
+            (identical(other.subwaysname, subwaysname) ||
+                other.subwaysname == subwaysname) &&
+            (identical(other.subwayename, subwayename) ||
+                other.subwayename == subwayename) &&
+            (identical(other.express, express) || other.express == express));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, STATION_CD, STATION_NM,
-      ARRIVETIME, ORIGINSTATION, SUBWAYSNAME, SUBWAYENAME, EXPRESS_YN);
+  int get hashCode => Object.hash(runtimeType, stationcd, stationnm, arrivetime,
+      originstation, subwaysname, subwayename, express);
 
   @JsonKey(ignore: true)
   @override
@@ -261,37 +274,44 @@ class _$_TimeTable implements _TimeTable {
 
 abstract class _TimeTable implements TimeTable {
   const factory _TimeTable(
-      {final String? STATION_CD,
-      final String? STATION_NM,
-      final String? ARRIVETIME,
-      final String? ORIGINSTATION,
-      final String? SUBWAYSNAME,
-      final String? SUBWAYENAME,
-      final String? EXPRESS_YN}) = _$_TimeTable;
+      {@JsonKey(name: 'STATION_CD') final String? stationcd,
+      @JsonKey(name: 'STATION_NM') final String? stationnm,
+      @JsonKey(name: 'ARRIVETIME') final String? arrivetime,
+      @JsonKey(name: 'ORIGINSTATION') final String? originstation,
+      @JsonKey(name: 'SUBWAYSNAME') final String? subwaysname,
+      @JsonKey(name: 'SUBWAYENAME') final String? subwayename,
+      @JsonKey(name: 'EXPRESS_YN') final String? express}) = _$_TimeTable;
 
   factory _TimeTable.fromJson(Map<String, dynamic> json) =
       _$_TimeTable.fromJson;
 
   @override
-  String? get STATION_CD;
+  @JsonKey(name: 'STATION_CD')
+  String? get stationcd;
   @override
-  String? get STATION_NM;
+  @JsonKey(name: 'STATION_NM')
+  String? get stationnm;
   @override
-  String? get ARRIVETIME;
-  @override
-
-  ///
-  String? get ORIGINSTATION;
-  @override
-  String? get SUBWAYSNAME;
+  @JsonKey(name: 'ARRIVETIME')
+  String? get arrivetime;
   @override
 
   ///
-  String? get SUBWAYENAME;
+  @JsonKey(name: 'ORIGINSTATION')
+  String? get originstation;
+  @override
+  @JsonKey(name: 'SUBWAYSNAME')
+  String? get subwaysname;
   @override
 
   ///
-  String? get EXPRESS_YN;
+  @JsonKey(name: 'SUBWAYENAME')
+  String? get subwayename;
+  @override
+
+  ///
+  @JsonKey(name: 'EXPRESS_YN')
+  String? get express;
   @override
   @JsonKey(ignore: true)
   _$$_TimeTableCopyWith<_$_TimeTable> get copyWith =>

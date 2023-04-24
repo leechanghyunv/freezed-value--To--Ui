@@ -5,13 +5,13 @@ part 'table_model.freezed.dart';
 @Freezed()
 class TimeTable with _$TimeTable{
   const factory TimeTable({
-    @Default("정보없음") String? STATION_CD,
-    @Default("정보없음") String? STATION_NM,
-    @Default("정보없음") String? ARRIVETIME, ///
-    @Default("정보없음") String? ORIGINSTATION,
-    @Default("정보없음") String? SUBWAYSNAME, ///
-    @Default("정보없음") String? SUBWAYENAME, ///
-    @Default("정보없음") String? EXPRESS_YN, ///
+    @Default("정보없음") @JsonKey(name: 'STATION_CD') String? stationcd,
+    @Default("정보없음") @JsonKey(name: 'STATION_NM') String? stationnm,
+    @Default("정보없음") @JsonKey(name: 'ARRIVETIME') String? arrivetime,
+    @Default("정보없음") @JsonKey(name: 'ORIGINSTATION') String? originstation,
+    @Default("정보없음") @JsonKey(name: 'SUBWAYSNAME') String? subwaysname,
+    @Default("정보없음") @JsonKey(name: 'SUBWAYENAME') String? subwayename,
+    @Default("정보없음") @JsonKey(name: 'EXPRESS_YN') String? express,
   }) = _TimeTable;
   factory TimeTable.fromJson(Map<String, Object?> json) => _$TimeTableFromJson(json);
 }

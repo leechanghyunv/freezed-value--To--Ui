@@ -26,3 +26,4 @@ class Realtime with _$Realtime{
 
   factory Realtime.fromJson(Map<String, Object?> json) => _$RealtimeFromJson(json);
 }
+

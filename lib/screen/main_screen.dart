@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../controller/get_code_controller.dart';
+import '../controller/microdust_controller.dart';
 import '../controller/realtime_controller.dart';
 import '../controller/time_table_controller.dart';
 import '../custom/custom_button.dart';
@@ -20,8 +21,17 @@ class MyHomePage extends StatefulWidget {
 final aa = Get.put(SubwayDataController());
 final bb = Get.put(TimetableDataController());
 final cc = Get.put(GetCodeContoller());
+final dd = Get.put(MicroDustDataController());
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  @override
+  void initState() {
+    super.initState();
+    dd.getdustinfo();
+    bb.getTimeTableData();
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,27 +40,68 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            main_button(
+            MainButton(
               onPressed: (){
-                aa.fetchRealtimeStationArrival('서울');
-                // Get.snackbar(
-                //     aa.SubwayData?.elementAt(0)?.arvlMsg2.toString() ?? '',
-                //     'message',
-                //     duration: Duration(seconds: 5)
-                // );
+                aa.fetchRealtimeStationArrival('한대앞');
+                showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      content: Container(
+                        width: double.maxFinite,
+                        child: GetX<SubwayDataController>(
+                            builder: (controller){
+                              if (controller.SubwayDatas.isEmpty) {
+                                return CircularProgressIndicator();
+                              } else {
+                                return ListView.builder(
+                                    itemCount: controller.SubwayDatas.length,
+                                    itemBuilder: (context, index){
+                                      final row = controller.SubwayDatas[index];
+                                      return ListTile(
+                                        title: Text(row.subwayId.toString()),
+                                        subtitle: Text(row.updnLine.toString()),
+                                      );
+                                    }
+                                );
+                              }
+                            }),
+                      ),
+                    ));
               },
               comment: 'Call Subway RealTimeData',),
-            main_button(
+            MainButton(
               onPressed: (){
-                bb.getTimeTableData();
-                Get.snackbar(
-                    bb.TableA?.elementAt(0).toString() ?? '',
-                    bb.TableB?.elementAt(0).toString() ?? '',
-                    duration: Duration(seconds: 5)
+                showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      content: Container(
+                        width: double.maxFinite,
+                        child: GetX<TimetableDataController>(
+                            builder: (controller){
+                              if (controller.TableA.isEmpty){
+                                return Center(
+                                  child: Text('Table is Empty'));
+                              }else {
+                                return ListView.builder(
+                                    itemCount: controller.TableA.length,
+                                    itemBuilder: (context, index){
+                                      final row1 = controller.TableA[index];
+                                      return ListTile(
+                                        title: Text('${row1.subwayename.toString()} ${row1.arrivetime.toString()}'),
+                                          subtitle: Text('${bb.TableB[index].subwayename} ${bb.TableB[index].arrivetime}'),
+                                      );
+                                    }
+                                    );
+                              }
+                        }
+                        ),
+                      ),
+                    )
                 );
+
               },
               comment: 'Call Subway Timetable',),
-            main_button(
+            MainButton(
               onPressed: (){
                 cc.getsubwaycode();
                 showDialog(
@@ -58,8 +109,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     builder: (context) => AlertDialog(
                       content: Container(
                         width: double.maxFinite,
-                        child: GetX<GetCodeContoller>
-                          (builder: (controller){
+                        child: GetX<GetCodeContoller>(
+                            builder: (controller){
                           if (controller.codes.isEmpty) {
                             return CircularProgressIndicator();
                           } else {
@@ -71,7 +122,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                     title: Text(row.subwaycode.toString()),
                                     subtitle: Text(row.line.toString()),
                                   );
-                                });
+                                }
+                                );
                           }
                         }
                         ),
@@ -79,7 +131,44 @@ class _MyHomePageState extends State<MyHomePage> {
                     ));
               },
               comment: 'Call Subway Code',),
+            MainButton(
+              onPressed: (){
+                dd.getdustinfo();
+                showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      content: Container(
+                        width: double.maxFinite,
+                        child: GetX<MicroDustDataController>(
+                          builder: (controller){
+                            if (controller.dusts.isEmpty) {
+                              return Center(
+                                  child: Text('dusts is Empty'));
+                            }else{
+                              return ListView.builder(
+                                  itemCount: controller.dusts.length,
+                                  itemBuilder: (context, index){
+                                    final row = controller.dusts[index];
+                                    return ListTile(
+                                      title: Text(row.pm10.toString()),
+                                      subtitle: Text(row.region.toString()),
+                                    );
+                                  }
+                              );
+                            }
+                          },
+                        ),
+                      ),
+                    ));
 
+              },
+              comment: 'Call MicroDust Data',),
+            MainButton(
+              onPressed: (){
+
+              },
+              comment: 'Call Something',
+            ),
           ],
         ),
       ),
